@@ -1,0 +1,97 @@
+type AssignmentModel @model @auth(rules: [{allow: public}]) @key(name: "byCourse", fields: ["courseID"]) {
+  id: ID!
+  title: String
+  content: String
+  S3Key: String
+  courseID: ID
+  uploadedBy: String
+  uploadedAt: String
+}
+
+type SyllabusModel @model @auth(rules: [{allow: public}]) @key(name: "byCourse", fields: ["courseID"]) {
+  id: ID!
+  title: String
+  S3Key: String
+  courseID: ID
+  uploadedBy: String
+  uploadedAt: String
+}
+
+enum CourseStatus {
+  PUBLISHED
+  DRAFT
+}
+
+type CommentModel @model @auth(rules: [{allow: public}]) @key(name: "byPostModel", fields: ["postmodelID"]) {
+  id: ID!
+  comment: String
+  createdBy: String
+  createdAt: String
+  postmodelID: ID
+  User: User @connection
+}
+
+type PostModel @model @auth(rules: [{allow: public}]) @key(name: "byCourse", fields: ["courseID"]) {
+  id: ID!
+  content: String
+  createdBy: String
+  createdAt: String
+  CommentModels: [CommentModel] @connection(keyName: "byPostModel", fields: ["id"])
+  courseID: ID
+  User: User @connection
+}
+
+type AnnouncementsModel @model @auth(rules: [{allow: public}]) @key(name: "byCourse", fields: ["courseID"]) {
+  id: ID!
+  title: String
+  content: String
+  createdAt: String
+  courseID: ID
+  User: User @connection
+}
+
+type Lesson @model @auth(rules: [{allow: public}]) @key(name: "byCourse", fields: ["courseID"]) {
+  id: ID!
+  title: String
+  summary: String
+  videoURL: String
+  courseID: ID
+  createdBy: String
+}
+
+type Course @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  desc: String
+  introduction: String
+  createdBy: String
+  Lessons: [Lesson] @connection(keyName: "byCourse", fields: ["id"])
+  AnnouncementsModels: [AnnouncementsModel] @connection(keyName: "byCourse", fields: ["id"])
+  createdAt: String
+  User: User @connection
+  status: CourseStatus
+  PostModels: [PostModel] @connection(keyName: "byCourse", fields: ["id"])
+  SyllabusModels: [SyllabusModel] @connection(keyName: "byCourse", fields: ["id"])
+  AssignmentModels: [AssignmentModel] @connection(keyName: "byCourse", fields: ["id"])
+  enrolledStudents: [String]
+  CourseUsers: [CourseUser] @connection(keyName: "byCourse", fields: ["id"])
+  coursePin: String
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  email: String
+  username: String
+  isEducator: Boolean
+  courses: [CourseUser] @connection(keyName: "byUser", fields: ["id"])
+}
+
+type CourseUser @model(queries: null) @key(name: "byCourse", fields: ["courseID", "userID"]) @key(name: "byUser", fields: ["userID", "courseID"]) @auth(rules: [{allow: public}, {allow: public}]) {
+  id: ID!
+  courseID: ID!
+  userID: ID!
+  course: Course! @connection(fields: ["courseID"])
+  user: User! @connection(fields: ["userID"])
+}
+ 
