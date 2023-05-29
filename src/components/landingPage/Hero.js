@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col, Typography, Button } from 'antd';
 import { ArrowRightOutlined, CheckCircleOutlined } from '@ant-design/icons';
 import hero from '../../assests/icon5.jpg';
+
 const { Title, Text } = Typography;
 
 function Hero() {
