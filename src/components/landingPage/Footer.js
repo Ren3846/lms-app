@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col, Typography, Divider } from 'antd';
 import { InstagramOutlined, FacebookOutlined, TwitterOutlined } from '@ant-design/icons';
-
+import Logo from './Logo';
+import { ImportantDevices } from '@material-ui/icons';
 const { Text, Title } = Typography;
 
 // const style = {
@@ -16,29 +17,11 @@ const Footer = () => {
       <div className="footer">
         <Row gutter={16} id="contact" justify="center" align="middle" className="footer-row">
           <Col span={4}>
-            <Title level={4}>Strong Mind</Title>
-            <div style={{ textAlign: 'left', marginTop: '2rem' }}>
-              <ul style={{ listStyleType: 'none', padding: 0 }}>
-                <li>STRONG MIND, ACADEMY </li>
-                <li>123 Street, Ukraine, Kyiv</li>
-                <li>
-                  <a href="tel:+380660514461">+380660514461</a>
-                </li>
-              </ul>
+            <div className="logo-container-footer">
+              <div className="logo">STRONG MIND ACADEMY</div>
             </div>
           </Col>
-          <Col span={4}>
-            <Title level={4}>Strong Mind</Title>
-            <div style={{ textAlign: 'left', marginTop: '2rem' }}>
-              <ul style={{ listStyleType: 'none', padding: 0 }}>
-                <li>STRONG MIND, ACADEMY </li>
-                <li>123 Street, Ukraine, Kyiv</li>
-                <li>
-                  <a href="tel:+380660514461">+380660514461</a>
-                </li>
-              </ul>
-            </div>
-          </Col>
+
           <Col span={4}>
             <Title level={4}>Контакты</Title>
             <div style={{ textAlign: 'left', marginTop: '2rem' }}>
@@ -52,14 +35,37 @@ const Footer = () => {
             </div>
           </Col>
           <Col span={4}>
+            <Title level={4}>Strong Mind</Title>
+            <div style={{ textAlign: 'left', marginTop: '2rem' }}>
+              <ul style={{ listStyleType: 'none', padding: 0 }}>
+                <li>
+                  -{' '}
+                  <a style={{ color: '#000' }} href="/signin">
+                    О нас
+                  </a>
+                </li>
+                <li>
+                  -{' '}
+                  <a style={{ color: '#000' }} href="/signin">
+                    Стать репетитором{' '}
+                  </a>
+                </li>
+                <li>
+                  -{' '}
+                  <a style={{ color: '#000' }} href="/signin">
+                    Связаться с нами
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </Col>
+          <Col span={4}>
             <Title level={4}>Оплата</Title>
             <div style={{ textAlign: 'left', marginTop: '2rem' }}>
               <ul style={{ listStyleType: 'none', padding: 0 }}>
-                <li>STRONG MIND, ACADEMY </li>
-                <li>123 Street, Ukraine, Kyiv</li>
-                <li>
-                  <a href="tel:+380660514461">+380660514461</a>
-                </li>
+                <li>Mastercard</li>
+                <li>Visa</li>
+                <li>PayPal</li>
               </ul>
             </div>
           </Col>

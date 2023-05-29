@@ -136,8 +136,18 @@ body {
   /* justify-content: center; */
   align-items: left;
   width: 100%;
-  /* background-color: #1890ff; Измените цвет фона на ваше усмотрение */
   color: white;
+  font-size: 18px;
+  /* height: 80px; */
+  flex-wrap: wrap;
+}
+
+.logo-container-footer {
+  /* display: flex; */
+  /* justify-content: center; */
+  align-items: left;
+  width: 100%;
+  color: black;
   font-size: 18px;
   /* height: 80px; */
   flex-wrap: wrap;
