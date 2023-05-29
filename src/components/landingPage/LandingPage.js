@@ -1,8 +1,7 @@
 import React from 'react';
-import Logo from './Logo';
 import Hero from './Hero';
-import Benefit from './Benefit';
-import Features from './Features';
+import About from './About';
+import BecomeTutor from './BecomeTutor';
 import Footer from './Footer';
 import AppHeader from './Header';
 
@@ -10,10 +9,9 @@ function LandingPage() {
   return (
     <div>
       <AppHeader />
-      {/* <Logo /> */}
       <Hero />
-      <Benefit />
-      <Features />
+      <About />
+      <BecomeTutor />
       <Footer />
     </div>
   );

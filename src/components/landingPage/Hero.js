@@ -1,61 +1,48 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import hero from '../../assests/hero.svg';
+import { Row, Col, Typography, Button } from 'antd';
 import { ArrowRightOutlined, CheckCircleOutlined } from '@ant-design/icons';
-import { Button, Typography, Row, Col } from 'antd';
-
+import hero from '../../assests/icon5.jpg';
 const { Title, Text } = Typography;
 
 function Hero() {
   return (
-    <div style={{ background: '#fff', color: 'white', height: '100vh' }}>
-      <Row justify="center" align="middle" style={{ paddingLeft: '60px' }}>
-        <Col xs={24} md={12}>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              height: '100%',
-            }}>
-            <Title level={2} style={{ marginBottom: '20px' }}>
-              Английские уроки для каждого!{' '}
-            </Title>
-            <Text className="subtitle" style={{ marginBottom: '20px' }}>
-              Мы подготовили для вас все удобные способы изучения языка
-            </Text>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', padding: '10px' }}>
-            <CheckCircleOutlined style={{ marginRight: '5px', color: '#000' }} />
-            <span style={{ fontSize: '16px', color: '#000' }}>ОТ 5$ ЗА УРОК</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', padding: '10px' }}>
-            <CheckCircleOutlined style={{ marginRight: '5px', color: '#000' }} />
-            <span style={{ fontSize: '16px', color: '#000' }}>2 БЕСПЛАТНЫХ УРОКА ДЛЯ ВАС</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', padding: '10px' }}>
-            <CheckCircleOutlined style={{ marginRight: '5px', color: '#000' }} />
-            <span style={{ fontSize: '16px', color: '#000' }}>УРОКИ ОТ 20 ДО 50 МИНУТ</span>
-          </div>
-
-          <Button
-            type="primary"
-            shape="round"
-            size="large"
-            className="button"
-            style={{ marginTop: '20px' }}>
-            <Link to="/signin" style={{ color: 'white', display: 'flex', alignItems: 'center' }}>
-              <span style={{ fontSize: '16px', marginRight: '5px' }}>Попробуйте бесплатно</span>
-              <ArrowRightOutlined />
-            </Link>
-          </Button>
-        </Col>
-        <Col xs={24} md={12} style={{ textAlign: 'center', padding: '150px' }}>
-          <img src={hero} alt="hero" height="450rem" />
-        </Col>
-      </Row>
-    </div>
+    <Row
+      id="home"
+      justify="center"
+      align="middle"
+      style={{ minHeight: '100vh', backgroundColor: '#fff' }}>
+      <Col xs={22} sm={20} md={16} lg={12} xl={20}>
+        <Row gutter={[16, 16]} justify="space-between" align="middle">
+          <Col xs={24} sm={12} md={12} lg={12}>
+            <div>
+              <Title level={1} style={{ marginBottom: '1rem' }}>
+                Английские уроки для каждого!
+              </Title>
+              <Text style={{ fontSize: '16px' }}>
+                Мы подготовили для вас все удобные способы изучения языка
+                <br /> <br />
+                <CheckCircleOutlined style={{ marginRight: '5px', color: '#000' }} />
+                - ОТ 5$ ЗА УРОК
+                <br />
+                <CheckCircleOutlined style={{ marginRight: '5px', color: '#000' }} />
+                - 2 БЕСПЛАТНЫХ УРОКА ДЛЯ ВАС
+                <br />
+                <CheckCircleOutlined style={{ marginRight: '5px', color: '#000' }} />- УРОКИ ОТ 20
+                ДО 50 МИНУТ
+              </Text>
+              <div style={{ marginTop: '2rem' }}>
+                <Button type="primary" shape="round" size="large" className="button" href="/signup">
+                  Начать уроки <ArrowRightOutlined />
+                </Button>
+              </div>
+            </div>
+          </Col>
+          <Col xs={24} sm={12} md={12} lg={12}>
+            <img src={hero} alt="English Lessons" style={{ width: '100%' }} />
+          </Col>
+        </Row>
+      </Col>
+    </Row>
   );
 }
 

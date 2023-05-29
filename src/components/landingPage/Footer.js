@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div>
       <div className="footer">
-        <Row justify="center" align="middle" className="footer-row">
+        <Row id="contact" justify="center" align="middle" className="footer-row">
           <Col span={8}>
             <Title level={4}>Социальные сети</Title>
             <br></br>

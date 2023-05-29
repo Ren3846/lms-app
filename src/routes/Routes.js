@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import { DataStore } from '@aws-amplify/datastore';
 import { User } from '../models';
-import Auth from '@aws-amplify/auth';
 import PrivateRoute from './PrivateRoute';
 import ProtectedRoute from './ProtectedRoute';
 
@@ -39,9 +38,9 @@ export default function Routes() {
   //fake currentAuthenticatedUser
   async function getUser() {
     const fakeUser = { username: 'guest', isEducator: false };
-    const fakeTeacher = { username: 'teacher', isEducator: true };
+    // const fakeTeacher = { username: 'teacher', isEducator: true };
 
-    setCurrentUser([fakeTeacher]);
+    setCurrentUser([fakeUser]);
     console.log('user');
   }
 

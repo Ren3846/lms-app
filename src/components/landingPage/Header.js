@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Button, Space, Row, Col, Divider } from 'antd';
+import { Layout, Menu, Button, Space, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 import {
   LoginOutlined,
@@ -21,24 +21,24 @@ function AppHeader() {
         </Col>
 
         <Col span={10}>
-          {/* <Menu
+          <Menu
             theme="dark"
             mode="horizontal"
             defaultSelectedKeys={['home']}
             style={{ lineHeight: '63px', background: '#12355B' }}>
             <Menu.Item key="home">
-              <Link to="/">Главная</Link>
+              <a href="#home">Главная</a>
             </Menu.Item>
             <Menu.Item key="about">
-              <Link to="/about">Про нас</Link>
+              <a href="#about">Про нас</a>
             </Menu.Item>
-            <Menu.Item key="support">
-              <Link to="/support">Помощь</Link>
+            <Menu.Item key="tutor">
+              <a href="#becometutor">Учителям</a>
             </Menu.Item>
             <Menu.Item key="contact">
-              <Link to="/contact">Контакты</Link>
+              <a href="#contact">Контакты</a>
             </Menu.Item>
-          </Menu> */}
+          </Menu>
         </Col>
         <Col span={4}>
           <Space>
