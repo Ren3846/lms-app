@@ -116,6 +116,21 @@ body {
   color: #1890ff;
 }
 
+.social-footer {
+  display: flex;
+  align-items: center;
+}
+
+.social-footer a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #000;
+}
+
+.social-footer a:hover {
+  color: #1890ff;
+}
+
 .logo-container {
   /* display: flex; */
   /* justify-content: center; */
@@ -132,4 +147,8 @@ body {
   /* border: 1px solid #1677ff; */
   /* padding: 10px; */
   letter-spacing: 6px;
+}
+
+.gutter-box {
+  padding: 8px 0;
 }

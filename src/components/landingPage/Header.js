@@ -24,7 +24,6 @@ function AppHeader() {
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['home']}
             style={{ lineHeight: '63px', background: '#12355B' }}>
             <Menu.Item key="home">
               <a href="#home">Главная</a>
