@@ -14,7 +14,7 @@ export default function Calendar() {
         <Grid item xs={12} md={1} className={classes.sidebar}>
           <Navigation />
         </Grid>
-        <Grid item xs={12} md={11} className={classes.grid}>
+        <Grid item xs={12} md={10} className={classes.grid}>
           <Container align="center">
             <CalendarView />
           </Container>
@@ -40,3 +40,55 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+// import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
+// import Navigation from '../Navigation';
+// import CalendarView from './CalendarView';
+
+// import { Breadcrumb, Layout, Menu, theme } from 'antd';
+// import React from 'react';
+// const { Header, Content, Sider } = Layout;
+// const items1 = ['1', '2', '3'].map((key) => ({
+//   key,
+//   label: `nav ${key}`,
+// }));
+// const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
+//   const key = String(index + 1);
+//   return {
+//     key: `sub${key}`,
+//     icon: React.createElement(icon),
+//     label: `subnav ${key}`,
+//     children: new Array(4).fill(null).map((_, j) => {
+//       const subKey = index * 4 + j + 1;
+//       return {
+//         key: subKey,
+//         label: `option${subKey}`,
+//       };
+//     }),
+//   };
+// });
+// const App = () => {
+//   const {
+//     token: { colorBgContainer },
+//   } = theme.useToken();
+//   return (
+//     <>
+//       <Navigation />
+//       <Layout
+//         style={{
+//           padding: '0 24px 24px',
+//         }}>
+//         <Content
+//           style={{
+//             padding: 24,
+//             margin: 0,
+//             minHeight: 280,
+//             background: colorBgContainer,
+//           }}>
+//           <CalendarView />
+//         </Content>
+//       </Layout>
+//     </>
+//   );
+// };
+// export default App;

@@ -1,33 +1,3 @@
-// import * as React from 'react';
-// import Paper from '@material-ui/core/Paper';
-// import { ViewState } from '@devexpress/dx-react-scheduler';
-// import {
-//   Scheduler,
-//   MonthView,
-//   Toolbar,
-//   DateNavigator,
-//   Appointments,
-//   TodayButton,
-// } from '@devexpress/dx-react-scheduler-material-ui';
-// import { appointments } from './appointments/appointments';
-
-// export default function Demo() {
-//   const currentDate = new Date();
-
-//   return (
-//     <Paper>
-//       <Scheduler data={appointments}>
-//         <ViewState defaultCurrentDate={currentDate} />
-//         <MonthView />
-//         <Toolbar />
-//         <DateNavigator />
-//         <TodayButton />
-//         <Appointments />
-//       </Scheduler>
-//     </Paper>
-//   );
-// }
-
 import { Badge, Calendar } from 'antd';
 const getListData = (value) => {
   let listData;
@@ -97,7 +67,7 @@ const getMonthData = (value) => {
     return 1394;
   }
 };
-const Demo = () => {
+const CalendarView = () => {
   const monthCellRender = (value) => {
     const num = getMonthData(value);
     return num ? (
@@ -126,4 +96,4 @@ const Demo = () => {
   };
   return <Calendar cellRender={cellRender} />;
 };
-export default Demo;
+export default CalendarView;

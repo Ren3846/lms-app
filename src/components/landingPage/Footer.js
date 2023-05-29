@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col, Typography, Divider } from 'antd';
 import { InstagramOutlined, FacebookOutlined, TwitterOutlined } from '@ant-design/icons';
-import Logo from './Logo';
-import { ImportantDevices } from '@material-ui/icons';
+
 const { Text, Title } = Typography;
 
 // const style = {
