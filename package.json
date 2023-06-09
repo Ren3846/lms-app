@@ -2,6 +2,7 @@
   "name": "lms-app-amplify",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ren3846.github.io/lms-app",
   "dependencies": {
     "@ant-design/icons": "^5.1.2",
     "@aws-amplify/ui-react": "^1.2.1",
